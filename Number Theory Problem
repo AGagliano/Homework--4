@@ -1,0 +1,75 @@
+#Problem number 1, investigating number theory problem code is provided in this file. 
+
+
+#The following code tests the function f(x) = x^2 + 5 over a range of integers x. When evaluated, the code prints out 
+  #f(x) if f(x) is prime. Thus, we can see from the output that as the range of possible x's increases, 
+  #the number of primes increases (see output samples below), allowing us to conjecture that the set: 
+  #{x exists in Z, f(x) = x^2 + 5 is prime} is infinite.
+
+#code:
+a = 0
+b = 5
+
+def f(x):
+    return x**2 + a*x + b
+
+for n in range(1000):
+    if is_prime(f(n)) == True:
+        print f(n)
+
+
+#output for range(13):
+5
+41
+149
+
+#output for range(1000):
+5
+41
+149
+1301
+2309
+5189
+6089
+9221
+13001
+15881
+26249
+28229
+39209
+41621
+60521
+66569
+86441
+112901
+116969
+138389
+171401
+186629
+207941
+213449
+242069
+254021
+266261
+285161
+304709
+331781
+345749
+352841
+389381
+443561
+509801
+527081
+571541
+589829
+617801
+627269
+636809
+646421
+695561
+725909
+767381
+788549
+842729
+910121
+992021
