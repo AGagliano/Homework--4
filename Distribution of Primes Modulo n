@@ -1,0 +1,10 @@
+# The following gives the code for problem number 2, Distribution of Primes Modulo n
+# This is known as Dirichlet's Theorem
+
+n = 15
+a = prime_range(100)
+for i in a:
+    a[i] = a[i] % n
+print a
+
+#Still need to add in histogram portion of the problem
