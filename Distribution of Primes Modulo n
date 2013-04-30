@@ -2,9 +2,26 @@
 # This is known as Dirichlet's Theorem
 
 n = 15
-a = prime_range(100)
-for i in a:
+a = prime_range(10^7)
+for i in range(0, len(a)):
     a[i] = a[i] % n
-print a
 
-#Still need to add in histogram portion of the problem
+t = stats.TimeSeries(a)
+t.plot_histogram()
+
+#output:
+histogram plot
+patterns of histogram: the same counts of numbers result for 1, 2, 4, 7, 8, 11, 13, and 14.
+    This is a surprising result.
+
+#Now using n = 3
+histogram plot pattern: the same counts of numbers result for 1, 2.
+
+#Using n = 31
+histogram plot pattern: the same counts of numbers result for certain values between 1 and 30
+
+#histogram for general n: same counts for numbers resulting for certain values between 1 and (n-1). 
+    The pattern seems to go in a 2, 1, 2, 1, pattern where two integers side by side have counts in that category,
+    skips an integer, then the next integer has high counts again, skips an integer, then the pattern repeats with 
+    2 integers in a row with high counts. Quite interesting.
+
